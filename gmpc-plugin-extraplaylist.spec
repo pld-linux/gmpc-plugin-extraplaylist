@@ -1,6 +1,3 @@
-# TODO:
-# - desc
-
 %define		source_name gmpc-extraplaylist
 Summary:	Extraplaylist plugin for Gnome Music Player Client
 Summary(pl.UTF-8):	Wtyczka extraplaylist dla odtwarzacza Gnome Music Player Client
@@ -19,15 +16,15 @@ BuildRequires:	gtk+2-devel >= 2:2.4
 BuildRequires:	libglade2-devel
 BuildRequires:	libmpd-devel >= 0.17.0
 BuildRequires:	libtool
+BuildRequires:	libxml2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The plugin allows you to generate a playlist based on a set of rules,
-f.e. "Genre contains 'jazz' and artist doesn't contain 'Jones'".
+The extraplaylist plugin adds a second pane showing the playlist.
 
 %description -l pl.UTF-8
-Ta wtyczka pozwala generować playlisty w oparciu o zbiór reguł, na
-przykład "Gatunek zawiera 'jazz' i wykonawca nie zawiera 'Jones'".
+Wtyczka extraplaylist dodaje drugie okienko pokazujące listę
+odtwarzania.
 
 %prep
 %setup -qn %{source_name}-%{version}
@@ -45,8 +42,6 @@ przykład "Gatunek zawiera 'jazz' i wykonawca nie zawiera 'Jones'".
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_libdir}/gmpc
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
@@ -57,4 +52,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/gmpc/plugins/*.so
+%attr(755,root,root) %{_libdir}/gmpc/plugins/libextraplaylist.so
