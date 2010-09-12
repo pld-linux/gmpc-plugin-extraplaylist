@@ -2,12 +2,12 @@
 Summary:	Extraplaylist plugin for Gnome Music Player Client
 Summary(pl.UTF-8):	Wtyczka extraplaylist dla odtwarzacza Gnome Music Player Client
 Name:		gmpc-plugin-extraplaylist
-Version:	0.19.0
+Version:	0.20.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
-Source0:	http://dl.sourceforge.net/musicpd/%{source_name}-%{version}.tar.gz
-# Source0-md5:	7e44dd3c04e1d0cd3570f584791355ad
+Source0:	http://downloads.sourceforge.net/musicpd/%{source_name}-%{version}.tar.gz
+# Source0-md5:	ddf19f1e831bff9e67268280d3afe107
 URL:		http://gmpc.wikia.com/wiki/GMPC_PLUGIN_EXTRA_PLAYLIST
 BuildRequires:	autoconf
 BuildRequires:	automake
